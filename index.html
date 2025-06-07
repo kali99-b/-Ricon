@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gráficos Futuros 1m - Coluna</title>
+  <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+    <link rel="stylesheet" href="css/grafico.css" />
+    <style>
+        .blocoBTC {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        color: aliceblue;
+        font-size: 18px;
+        font-weight: bold;
+        z-index: 10;
+        background: rgba(82, 83, 124, 0.5);
+        padding: 4px 8px;
+        border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+  <div id="charts-container">
+
+    <div class="chart-wrapper">
+        <div class="chart-header">BTCUSDT Futuros - Intervalo 1 minuto</div>
+        <div class="chart-container" id="btc-chart">
+            <div class="blocoBTC">BTCUSDT Futuros - Intervalo 1 minuto</div>
+        </div>
+    </div>
+
+
+    <div class="chart-wrapper">
+      <div class="chart-header">ETHUSDT hhhFuturos - Intervalo 1 minuto</div>
+      <div class="chart-container" id="eth-chart">
+        <div class="blocoBTC">ETHUSDT Futuros - Intervalo 1 minuto</div>
+    </div>
+      
+    </div>
+
+    <div class="chart-wrapper">
+      <div class="chart-header">BNBUSDT Futuros - Intervalo 1 minuto</div>
+      <div class="chart-container" id="bnb-chart">
+        <div class="blocoBTC">BNBUSDT Futuros - Intervalo 1 minuto</div>
+    </div>
+      
+    </div>
+
+    <div class="chart-wrapper">
+      <div class="chart-header">SOLUSDT Futuros - Intervalo 1 minuto</div>
+      <div class="chart-container" id="sol-chart">
+        <div class="blocoBTC">SOLUSDT Futuros - Intervalo 1 minuto</div>
+    </div>
+      
+    </div>
+
+    <div class="chart-wrapper">
+        <div class="chart-header">ADAUSDT Futuros - Intervalo 1 minuto</div>
+        <div class="chart-container" id="ada-chart">
+        <div class="blocoBTC">ADASDT Futuros - Intervalo 1 minuto</div>
+        </div> 
+    </div>
+
+    <div class="chart-wrapper">
+        <div class="chart-header">XRPUSDT Futuros - Intervalo 1 minuto</div>
+        
+        <div class="chart-container" id="xrp-chart">
+            <div class="blocoBTC">XRPUSDT Futuros - Intervalo 1 minuto</div>
+        </div>      
+    </div>
+
+  </div>
+  <script src="js/grafico.js"></script>
+
+</body>
+</html>
