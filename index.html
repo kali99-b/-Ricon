@@ -1,80 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gráficos Futuros 1m - Coluna</title>
-  <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
-    <link rel="stylesheet" href="css/grafico.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoShop - Tecnologia e Estilo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        .blocoBTC {
-        position: absolute;
-        top: 20px;
-        left: 10px;
-        color: aliceblue;
-        font-size: 18px;
-        font-weight: bold;
-        z-index: 10;
-        background: rgba(82, 83, 124, 0.5);
-        padding: 4px 8px;
-        border-radius: 4px;
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glow:hover {
+            box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+            transform: scale(1.05);
         }
     </style>
 </head>
+<body class="min-h-screen flex flex-col">
 
-<body>
+    <header class="p-5 flex justify-between items-center glass border-b">
+        <h1 class="text-2xl font-bold text-cyan-400">NeoShop</h1>
+        <nav class="space-x-4">
+            <a href="#" class="hover:text-cyan-300">Home</a>
+            <a href="#" class="hover:text-cyan-300">Produtos</a>
+            <a href="#" class="hover:text-cyan-300">Sobre</a>
+            <a href="#" class="hover:text-cyan-300">Contato</a>
+        </nav>
+    </header>
 
-  <div id="charts-container">
+    <section class="flex-1 flex flex-col items-center justify-center text-center p-10">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">Tecnologia do Futuro</h2>
+        <p class="text-lg text-gray-300 mb-8">Produtos exclusivos com design inovador e alta performance.</p>
+        <a href="#produtos" class="bg-cyan-500 px-6 py-3 rounded-full text-black font-bold glow transition">Ver Produtos</a>
+    </section>
 
-    <div class="chart-wrapper">
-        <div class="chart-header">BTCUSDT Futuros - Intervalo 1 minuto</div>
-        <div class="chart-container" id="btc-chart">
-            <div class="blocoBTC">BTCUSDT Futuros - Intervalo 1 minuto</div>
+    <section id="produtos" class="p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass p-5 rounded-xl text-center glow transition">
+            <img src="https://via.placeholder.com/200" alt="Produto 1" class="mx-auto mb-4 rounded-lg">
+            <h3 class="text-xl font-bold text-cyan-300">Smartwatch X9</h3>
+            <p class="text-gray-300 mb-2">Tecnologia wearable de última geração</p>
+            <span class="text-cyan-400 font-bold text-lg">$199</span>
+            <button class="mt-4 bg-cyan-500 px-4 py-2 rounded-full text-black font-bold hover:bg-cyan-400">Comprar</button>
         </div>
-    </div>
 
+        <div class="glass p-5 rounded-xl text-center glow transition">
+            <img src="https://via.placeholder.com/200" alt="Produto 2" class="mx-auto mb-4 rounded-lg">
+            <h3 class="text-xl font-bold text-cyan-300">Fone VX Pro</h3>
+            <p class="text-gray-300 mb-2">Áudio imersivo com cancelamento de ruído</p>
+            <span class="text-cyan-400 font-bold text-lg">$149</span>
+            <button class="mt-4 bg-cyan-500 px-4 py-2 rounded-full text-black font-bold hover:bg-cyan-400">Comprar</button>
+        </div>
 
-    <div class="chart-wrapper">
-      <div class="chart-header">ETHUSDT hhhFuturos - Intervalo 1 minuto</div>
-      <div class="chart-container" id="eth-chart">
-        <div class="blocoBTC">ETHUSDT Futuros - Intervalo 1 minuto</div>
-    </div>
-      
-    </div>
+        <div class="glass p-5 rounded-xl text-center glow transition">
+            <img src="https://via.placeholder.com/200" alt="Produto 3" class="mx-auto mb-4 rounded-lg">
+            <h3 class="text-xl font-bold text-cyan-300">Drone Sky360</h3>
+            <p class="text-gray-300 mb-2">Capture o mundo em 360º com qualidade 4K</p>
+            <span class="text-cyan-400 font-bold text-lg">$499</span>
+            <button class="mt-4 bg-cyan-500 px-4 py-2 rounded-full text-black font-bold hover:bg-cyan-400">Comprar</button>
+        </div>
+    </section>
 
-    <div class="chart-wrapper">
-      <div class="chart-header">BNBUSDT Futuros - Intervalo 1 minuto</div>
-      <div class="chart-container" id="bnb-chart">
-        <div class="blocoBTC">BNBUSDT Futuros - Intervalo 1 minuto</div>
-    </div>
-      
-    </div>
-
-    <div class="chart-wrapper">
-      <div class="chart-header">SOLUSDT Futuros - Intervalo 1 minuto</div>
-      <div class="chart-container" id="sol-chart">
-        <div class="blocoBTC">SOLUSDT Futuros - Intervalo 1 minuto</div>
-    </div>
-      
-    </div>
-
-    <div class="chart-wrapper">
-        <div class="chart-header">ADAUSDT Futuros - Intervalo 1 minuto</div>
-        <div class="chart-container" id="ada-chart">
-        <div class="blocoBTC">ADASDT Futuros - Intervalo 1 minuto</div>
-        </div> 
-    </div>
-
-    <div class="chart-wrapper">
-        <div class="chart-header">XRPUSDT Futuros - Intervalo 1 minuto</div>
-        
-        <div class="chart-container" id="xrp-chart">
-            <div class="blocoBTC">XRPUSDT Futuros - Intervalo 1 minuto</div>
-        </div>      
-    </div>
-
-  </div>
-  <script src="js/grafico.js"></script>
+    <footer class="p-5 text-center glass border-t text-gray-400 text-sm">
+        &copy; 2025 NeoShop - Todos os direitos reservados.
+    </footer>
 
 </body>
 </html>
